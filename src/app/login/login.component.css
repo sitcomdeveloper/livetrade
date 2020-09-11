@@ -1,0 +1,81 @@
+img {
+    height: 6vh;
+  }
+  .log {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: 100%;
+    background-position: 100%;
+  }
+  
+  input.btn.btn-success {
+    padding: 10px 56px;
+    margin-left: 82px;
+    font-size: 17px;
+  }
+  .alertclass {
+    color:  red;
+  }
+  .alertclass1 {
+    color:  green;
+  }
+  
+  
+  body > app-root > app-login > div.container {
+    text-align: center !important;
+  }
+  
+  img.header.img-fluid {
+    max-width: 100px !important;
+    padding-top: 30px !important;
+  }
+  
+  body > app-root > app-login > div.container {
+    text-align: center !important;
+  }
+  
+    body > app-root > app-login > div.container > img {
+      padding-top: 25px !important;
+    }
+  
+  .label {
+    font-weight: bolder;
+    color: black;
+  }
+  
+  .registerDiv {
+    width: 100%;
+    text-align: right;
+  }
+  .text {
+    color: black;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-shadow: black;
+  }
+  .login-form {
+    width: 340px;
+    margin: 50px auto;
+  }
+  
+    .login-form form {
+      margin-bottom: 15px;
+      background: #f7f7f7;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+      padding: 30px;
+    }
+  
+    .login-form h2 {
+      margin: 0 0 15px;
+    }
+  
+  .form-control, .btn {
+    min-height: 38px;
+    border-radius: 2px;
+  }
+  
+  .btn {
+    font-size: 15px;
+    font-weight: bold;
+  }

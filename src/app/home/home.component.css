@@ -1,0 +1,17 @@
+.logo img {
+    width: auto;
+    height: 54px;
+}
+img {
+    display: inline-block;
+    vertical-align: middle;
+    border: 0;
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+}
+.welcome-name {
+    font: 400 18px/32px "Roboto Condensed",Arial,sans-serif;
+    padding: 0 50px;
+    color: #fff;
+}
