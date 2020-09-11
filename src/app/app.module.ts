@@ -4,14 +4,10 @@ import CanvasJS from 'canvasjs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { Home1Component } from './home1/home1.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    Home1Component
   ],
   imports: [
     BrowserModule,
