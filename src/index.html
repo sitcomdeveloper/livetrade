@@ -2,12 +2,152 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Angularcharts</title>
+  <title>LiveTrade</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.stock.min.js"></script>
+<!-- <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script> -->
 </head>
 <body>
   <app-root></app-root>
-</body>
+  <!-- <script>
+  window.onload = function() {
+
+    var dataPoints = [];
+    
+    var chart = new CanvasJS.Chart("chartContainer", {
+      theme: "light2",
+      title: {
+        text: "Live Data"
+      },
+      data: [{
+        type: "line",
+        dataPoints: dataPoints
+      }]
+    });
+    updateData();
+    
+    // Initial Values
+    var xValue = 0;
+    var yValue = 10;
+    var newDataCount = 6;
+    
+    function addData(data) {
+      if(newDataCount != 1) {
+        $.each(data, function(key, value) {
+          dataPoints.push({x: value[0], y: parseInt(value[1])});
+          xValue++;
+          yValue = parseInt(value[1]);
+        });
+      } else {
+        //dataPoints.shift();
+        dataPoints.push({x: data[0][0], y: parseInt(data[0][1])});
+        xValue++;
+        yValue = parseInt(data[0][1]);
+      }
+      
+      newDataCount = 1;
+      chart.render();
+      setTimeout(updateData, 1500);
+    }
+    
+    function updateData() {
+      $.getJSON("https://canvasjs.com/services/data/datapoints.php?xstart="+xValue+"&ystart="+yValue+"&length="+newDataCount+"type=json", addData);
+    }
+    
+    }
+  </script> -->
+  <!-- <script>
+    window.onload = function() {
+    
+    var dps = [];
+    var chart = new CanvasJS.Chart("chartContainer", {
+      animationEnabled: true,
+      exportEnabled: true,
+      title: {
+        text: "Intel Stock Price - January 2017"
+      },
+      axisX: {
+        valueFormatString: "DD MMM"
+      },
+      axisY: {
+        title: "Price",
+        prefix: "$"
+      },
+      data: [{
+        type: "ohlc",
+        name: "Intel Stock Price",
+        color: "#DD7E86",
+        showInLegend: true,
+        yValueFormatString: "$##0.00",
+        xValueType: "dateTime",
+        dataPoints: dps
+      }]
+    });
+    
+    $.getJSON("https://canvasjs.com/data/gallery/javascript/intel-stock-price.json", parseData);
+    
+    function parseData(result) {
+      for (var i = 0; i < result.length; i++) {
+        dps.push({
+          x: result[i].x,
+          y: result[i].y
+        });
+      }
+      chart.render();
+    }
+    
+    }
+    </script> -->
+<script>
+  window.onload = function () {
+  var dps1 = [], dps2= [];
+  var stockChart = new CanvasJS.StockChart("chartContainer",{
+    theme: "light2",
+    exportEnabled: true,
+    title:{
+      text:"Bitcoin StockChart with Date-Time Axis"
+    },
+    subtitles: [{
+      text: "Bitcoin Price (in USD)"
+    }],
+    charts: [{
+      axisX: {
+        crosshair: {
+          enabled: true,
+          snapToDataPoint: true
+        }
+      },
+      axisY: {
+        prefix: "$"
+      },
+      data: [{
+        type: "candlestick",
+        yValueFormatString: "$#,###.##",
+        dataPoints : dps1
+      }]
+    }],
+    navigator: {
+      data: [{
+        dataPoints: dps2
+      }],
+      slider: {
+        minimum: new Date(2018, 04, 01),
+        maximum: new Date(2018, 06, 01)
+      }
+    }
+  });
+  $.getJSON("https://canvasjs.com/data/docs/btcusd2018.json", function(data) {
+    for(var i = 0; i < data.length; i++){
+      dps1.push({x: new Date(data[i].date), y: [Number(data[i].open), Number(data[i].high), Number(data[i].low), Number(data[i].close)]});
+      dps2.push({x: new Date(data[i].date), y: Number(data[i].close)});
+    }
+    stockChart.render();
+  });
+}
+</script>
+  </body>
 </html>
