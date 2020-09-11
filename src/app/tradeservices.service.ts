@@ -12,6 +12,6 @@ export class TradeservicesService {
   constructor(private http: HttpClient) { }
   // login
   loginClient(clntloginParamtr: any): Observable<any> {
-    return this.http.post<any>(API_URL + 'Client/AuthClient', clntloginParamtr);
+    return this.http.post<any>(API_URL + 'Client/AuthClientByTpAccount', clntloginParamtr);
   }
 }

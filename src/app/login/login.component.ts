@@ -20,27 +20,27 @@ export class LoginComponent implements OnInit {
     })
   }
   accesstotrade() { 
-    this.router.navigateByUrl('/home');
-  //   const clntloginParamtr = {
-  //     ClientId: this.loginForm.value.accountnumber,
-  //     Password: this.loginForm.value.password
-  //   }
-  //   this.service.loginClient(clntloginParamtr).subscribe(loginRes => {
-  //     if (loginRes) {
-  //       this.router.navigateByUrl('/home');
-  //       this.userwilllogin = loginRes;
-  //       console.log('userwilllogin', loginRes);
-  //       localStorage.setItem('project', JSON.stringify(loginRes));
-  //       console.log('stringifydata', JSON.stringify(loginRes));
-  //       this.loginForm.reset();
-  //     } else {
-  //       alert('Invalid Credential');
-  //     }
-  //   },
-  //     err => {
-  //       alert('Error');
-  //     }
-  //   );
+    // this.router.navigateByUrl('/home');
+    const clntloginParamtr = {
+      ClientId: this.loginForm.value.accountnumber,
+      Password: this.loginForm.value.password
+    }
+    this.service.loginClient(clntloginParamtr).subscribe(loginRes => {
+      if (loginRes) {
+        this.router.navigateByUrl('/home');
+        this.userwilllogin = loginRes;
+        console.log('userwilllogin', loginRes);
+        localStorage.setItem('project', JSON.stringify(loginRes));
+        console.log('stringifydata', JSON.stringify(loginRes));
+        this.loginForm.reset();
+      } else {
+        alert('Invalid Credential');
+      }
+    },
+      err => {
+        alert('Error');
+      }
+    );
   }
 
 }

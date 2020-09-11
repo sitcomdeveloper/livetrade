@@ -15401,10 +15401,6 @@ body.modal-open .modal[style]:not([style="display: none;"]) .modal-dialog {
 .mrm100 {
 	margin-right: -100px
 }
-
-.mocco-theme .account-nav .dropdown-menu {
-}
-
 .mocco-theme .form .mat-slide-toggle .mat-slide-toggle-label .mat-slide-toggle-bar {
 	background: #3b5574
 }
@@ -15593,10 +15589,6 @@ body.modal-open .modal[style]:not([style="display: none;"]) .modal-dialog {
 .mocco-theme .ps__thumb-y {
 	background: #0672ab!important
 }
-
-.green-theme .account-nav .dropdown-menu {
-}
-
 .green-theme .form .mat-slide-toggle .mat-slide-toggle-label .mat-slide-toggle-bar {
 	background: #3b5574
 }
@@ -15904,10 +15896,6 @@ body.modal-open .modal[style]:not([style="display: none;"]) .modal-dialog {
 .easytech-theme .tools-nav>a:hover:after {
 	background-position: -50px -345px
 }
-
-.easytech-theme .account-nav .dropdown-menu {
-}
-
 .easytech-theme .account-nav .dropdown-menu .col .item.active h2 {
 	color: #fd882c
 }
@@ -16456,11 +16444,6 @@ body.modal-open .modal[style]:not([style="display: none;"]) .modal-dialog {
 .easytech-theme .tools-nav .dropdown-menu:after {
 	background-position: -115px -20px
 }
-
-.easytech-theme login-area {
-
-}
-
 .easytech-theme .login-box h1 {
 	color: #0c1724
 }
