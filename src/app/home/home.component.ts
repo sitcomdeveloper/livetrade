@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,13 +10,18 @@ export class HomeComponent implements OnInit {
   getLoginDetails: any;
   bindLoginData: any;
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
     // code for receiving login details and bind to header at place of name
     this.getLoginDetails = JSON.parse(localStorage.getItem('project'));
     this.bindLoginData = this.getLoginDetails;
 
+  }
+  // logout
+  logout() {
+    localStorage.clear();
+    this.router.navigateByUrl('/login');
   }
 
 }

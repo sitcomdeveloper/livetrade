@@ -7258,10 +7258,10 @@ button.close {
 	margin: 1px;
 	text-indent: -999px;
 	cursor: pointer;
-	background-color: #000\9;
 	background-color: rgba(0, 0, 0, 0);
 	border: 1px solid #fff;
-	border-radius: 10px
+	border-radius: 10px;
+	background-color: #000\9
 }
 
 .carousel-indicators .active {
@@ -10093,6 +10093,8 @@ header .btn-group.open>a {
 	height: 25px;
 	position: absolute;
 	content: "";
+	/* background: url(/) -50px -270px; */
+	background: url(/src/assets/images/sprite.png) -50px -270px;;
 	
 }
 
@@ -10104,7 +10106,7 @@ header .btn-group.open>a {
 .tools-nav .dropdown-menu {
 	left: auto;
 	right: 20px;
-	top: calc(100% + 15px);
+	/* top: calc(100% + 15px); */
 	padding: 5px 3px;
 	position: absolute
 }
