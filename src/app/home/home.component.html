@@ -16,7 +16,7 @@
                     <span>{{this.bindLoginData?.CurrencyName}} </span> {{this.bindLoginData?.Balance}}
                 </strong>
             </div>
-        </div><a class="button button5 btn-md btn-deposit" href="#"><span>DEPOSIT</span></a><div class="btn-group item account-nav" dropdown="">
+        </div><a class="button button5 btn-md btn-deposit" href="javascript:void(0);" (click)="openpopupfordeposit()"><span>DEPOSIT</span></a><div class="btn-group item account-nav" dropdown="">
             <a dropdowntoggle="" href="javascript:void(0);" aria-haspopup="true">
               <span>
                   <span>
@@ -33,12 +33,12 @@
                         <dl>
                             <dt>Balance: </dt>
                             <dd><span class="color01">
-                                <span>€</span>10000.00</span>
+                                <span>{{this.bindLoginData?.CurrencyName}} </span> {{this.bindLoginData?.Balance}}</span>
                             </dd>
                         </dl>
                         <dl>
                             <dt>ID: </dt>
-                            <dd>107557</dd>
+                            <dd>{{this.bindLoginData?.TPAccountNumber}}</dd>
                         </dl>
                     </div>
                 </div>
@@ -46,28 +46,28 @@
                     <h2>Personal information</h2>
                     <!----><dl>
                         <dt>Name: </dt>
-                        <dd>rohan&nbsp;gupta</dd>
+                        <dd>{{this.bindLoginData?.UserName}}&nbsp;</dd>
                     </dl>
                     <dl class="mb20">
                       <dt>Registration date: </dt>
-                      <dd>07/16/2020 12:31:37</dd>  
+                      <dd>{{this.bindLoginData?.CreatedAt}}</dd>  
                     </dl>
                     <h2>Trading information</h2>
                     <dl>
                       <dt>Currency: </dt>
-                      <dd>EUR</dd>  
+                      <dd>{{this.bindLoginData?.CurrencyName}}</dd>  
                     </dl>
                     <dl>
                       <dt>Leverage: </dt>
-                      <dd>1:200</dd>  
+                      <dd>{{this.bindLoginData?.LeverageName}}</dd>  
                     </dl>
                     <dl class="mb20">
                       <dt>Stop out:</dt>
-                      <dd>20</dd>  
+                      <dd>{{this.bindLoginData?.StopOut}}</dd>  
                     </dl>
                     <dl>
                       <dt>Profit: </dt>
-                      <dd><span class="color01">2177.08</span></dd>  
+                      <dd><span class="color01">{{this.bindLoginData?.OpenProfit}}</span></dd>  
                     </dl>
                 </div>
             </div>

@@ -14,4 +14,8 @@ export class TradeservicesService {
   loginClient(clntloginParamtr: any): Observable<any> {
     return this.http.post<any>(API_URL + 'Client/AuthClientByTpAccount', clntloginParamtr);
   }
+  // add fund
+  fundAccount(fndaccntparamtr: any): Observable<any> {
+    return this.http.post<any>(API_URL + 'TradeAccount/AddDeposit', fndaccntparamtr);
+  }
 }

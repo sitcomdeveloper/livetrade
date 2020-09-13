@@ -29,9 +29,9 @@ export class LoginComponent implements OnInit {
       if (loginRes) {
         this.router.navigateByUrl('/home');
         this.userwilllogin = loginRes;
-        console.log('userwilllogin', loginRes);
+        // console.log('userwilllogin', loginRes);
         localStorage.setItem('project', JSON.stringify(loginRes));
-        console.log('stringifydata', JSON.stringify(loginRes));
+        // console.log('stringifydata', JSON.stringify(loginRes));
         this.loginForm.reset();
       } else {
         alert('Invalid Credential');
