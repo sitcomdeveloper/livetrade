@@ -1,0 +1,32 @@
+
+<div class="modal-header">
+    <h4 class="modal-title pull-left">{{title}} </h4>
+    <!-- <button type="button" class="close pull-right" aria-label="Close" (click)="hideModal()">
+        <span aria-hidden="true">&times;</span>
+    </button> -->
+ </div>
+
+ <div class="login-form">
+    <form class="form-group" [formGroup]="loginForm">
+      <h2 class="text-center">Deposit</h2>
+      <div class="form-group">
+        <!-- <input type="text" class="form-control" formControlName="tpaccount" name="email" required placeholder="Account Number"> -->
+        <select class="form-control" name="SettingId" data-container="body" data-live-search="true" id="abea5caaa-1a55-8e20-fa13-7ef1560dca13" tabindex="-98" aria-required="true" formControlName="tpaccount">
+            <option value="{{this.bindLoginData?.TPAccountNumber}}">{{this.bindLoginData?.TPAccountNumber}}</option>
+         </select>
+      </div>
+      <div class="form-group">
+        <input type="number" class="form-control" formControlName="amount" name="password" required
+          placeholder="Amount">
+      </div>
+      <div class="form-group">
+        <!-- <button type="submit" class="btn btn-primary btn-block" [disabled]="ff.invalid">Log in</button>
+       -->
+       <button type="submit" class="btn btn-primary btn-block" (click)="addfund()">Add</button>
+       <!-- <button type="submit" class="btn btn-primary btn-block" (click)="hideModal()">Cancel</button> -->
+      
+      </div>
+      <div class="clearfix">
+      </div>
+    </form>
+  </div>

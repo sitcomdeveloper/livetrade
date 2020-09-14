@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { BsModalRef, BsModalService, ModalOptions } from 'ngx-bootstrap/modal';
-import { PopupComponent } from './popup/popup.component';
+import { PopupsComponent } from './popups/popups.component';
 
 
 @Component({
@@ -20,7 +20,6 @@ export class HomeComponent implements OnInit {
     // code for receiving login details and bind to header at place of name
     this.getLoginDetails = JSON.parse(localStorage.getItem('project'));
     this.bindLoginData = this.getLoginDetails;
-
   }
   // logout
   logout() {
@@ -30,12 +29,12 @@ export class HomeComponent implements OnInit {
   // deposit
   openpopupfordeposit() {
     const initialState = {
-      title: 'ADD FUND',
+      title: '',
       // userId: this.selectedchkbxfrdltclnt,
       adddepositfund: 'adddepositfund'
     };
     // tslint:disable-next-line: max-line-length
-    this.bsModalRef = this.modalService.show(PopupComponent, Object.assign({ show: true }, { class: 'modal450', initialState }));
+    this.bsModalRef = this.modalService.show(PopupsComponent, Object.assign({ show: true }, { class: 'modal450', initialState }));
     this.bsModalRef.content.closeBtnName = 'Cancel';
     this.bsModalRef.content.clddata.subscribe(() => {
       // this.userDetails();
