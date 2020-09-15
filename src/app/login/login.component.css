@@ -1,5 +1,6 @@
 img {
-    height: 6vh;
+  height: 16vh;
+  padding-left: 59px;
   }
   .log {
     background-repeat: no-repeat;
@@ -78,4 +79,13 @@ img {
   .btn {
     font-size: 15px;
     font-weight: bold;
+  }
+  a.pull-left:link{
+color:blue;
+  }
+  a.pull-left:visited{
+    color:green;
+      }
+  a.pull-left:hover{
+    color: black;
   }

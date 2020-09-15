@@ -10094,7 +10094,7 @@ header .btn-group.open>a {
 	position: absolute;
 	content: "";
 	/* background: url(/) -50px -270px; */
-	background: url(/src/assets/images/sprite.png) -50px -270px;
+	background: url(src/assets/images/sprite.png) -50px -270px;
 	
 }
 

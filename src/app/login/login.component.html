@@ -28,6 +28,7 @@
 </div>
 <div class="login-form">
   <form class="form-group" [formGroup]="loginForm">
+    <img src="assets/images/logo.png">
     <h2 class="text-center">Log in</h2>
     <div class="form-group">
       <input type="text" class="form-control" formControlName="accountnumber" name="email" required placeholder="Account Number">
@@ -39,16 +40,19 @@
     <div class="form-group">
       <!-- <button type="submit" class="btn btn-primary btn-block" [disabled]="ff.invalid">Log in</button>
      -->
-     <button type="submit" class="btn btn-primary btn-block" (click)="accesstotrade()">Log in</button>
-     <a href="http://topseedtech.com/webtrade/account" target="_blank">Sign up</a>
+     <button type="submit" class="btn btn-primary" (click)="accesstotrade()">Log in</button>
+     <a href="http://topseedtech.com/webtrade/account" class="btn btn-success"  target="_blank">Sign up</a>
     </div>
     <div class="clearfix">
-      <label class="pull-left checkbox-inline"><input type="checkbox" name="rememberMe"
-          id="rememberme"> Remember me</label>
-      <a href="http://topseedtech.com/webtrade/" class="pull-right" target="_blank">Forgot Password?</a>
+      <!-- <label class="pull-left checkbox-inline">
+        <input type="checkbox" name="rememberMe"
+          id="rememberme"> Remember me
+        </label> -->
+      <a href="http://topseedtech.com/webtrade/" class="pull-left" target="_blank">Forgot Password?</a>
     </div>
   </form>
-  <p class="text-center" style="display:none" ><a href="#" data-toggle="modal" data-target="#regModal">Create an
+  <p class="text-center" style="display:none" >
+    <a href="#" data-toggle="modal" data-target="#regModal">Create an
       Account</a></p>
 </div>
 <!-- <div class="modal fade" id="pwdModal">
