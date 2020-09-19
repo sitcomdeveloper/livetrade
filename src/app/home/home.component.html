@@ -3,14 +3,12 @@
     <h1 class="logo">
         <img alt="" src="/assets/images/logo.png">
     </h1>
-    <!----><div class="welcome-name">
+    <div class="welcome-name">
         Hello,&nbsp;{{this.bindLoginData?.UserName}}&nbsp;
     </div>
     <div class="top-panel">
-        <!---->
         <div class="user-balance">
-            <!---->
-            <!----><div>
+            <div>
                 Balance : 
                 <strong>
                     <span>{{this.bindLoginData?.CurrencyName}} </span> {{this.bindLoginData?.Balance}}
@@ -20,15 +18,13 @@
             <a dropdowntoggle="" href="javascript:void(0);" aria-haspopup="true">
               <span>
                   <span>
-                   <!---->
-                   <!----><span>Real Account</span>
+<span>Real Account</span>
                   </span>
               </span>
             </a>
             <div class="dropdown-menu" role="menu">
                 <div class="col">
-                    <!---->
-                    <!----><div class="item active">
+<div class="item active">
                         <h2>Real Account</h2>
                         <dl>
                             <dt>Balance: </dt>
@@ -44,7 +40,7 @@
                 </div>
                 <div class="col col2">
                     <h2>Personal information</h2>
-                    <!----><dl>
+<dl>
                         <dt>Name: </dt>
                         <dd>{{this.bindLoginData?.UserName}}&nbsp;</dd>
                     </dl>
@@ -103,3 +99,28 @@
     </div>
 </div>
 </header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright">
+        <!-- <a href="https://www.tradingview.com" rel="noopener" target="_blank">
+            <span class="blue-text">Market Data</span></a> by TradingView -->
+        </div>
+  </div>
+</div>
+  <!-- TradingView Widget END -->
+
+  <!-- TradingView Widget BEGIN -->
+  <div class="col-md-6">
+<div class="tradingview-widget-container">
+    <div id="tradingview_ddbbe"></div>
+    <div class="tradingview-widget-copyright"><a href="https://uk.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL Chart</span></a> by TradingView</div>
+   
+  </div>
+</div>
+</div>
+</div>
+  <!-- TradingView Widget END -->
