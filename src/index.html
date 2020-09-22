@@ -6,7 +6,7 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <!-- <div id="chartContainer" style="height: 300px; width: 100%;"></div> -->
+  <!-- bootstrap files -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
   integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -15,170 +15,173 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
   integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
   crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  <!-- bootstrap file end here -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous"></script> -->
 <!-- <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script> -->
 <!-- <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.stock.min.js"></script> -->
 <!-- <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script> -->
-
+<!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script> -->
 </head>
 <body>
   <app-root></app-root>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
-    {
-    "colorTheme" ; "light",
-    "dateRange": "12M",
-    "showChart": true,
-    "locale": "en",
-    "largeChartUrl": "",
-    "isTransparent": false,
-    "width": "400",
-    "height": "660",
-    "plotLineColorGrowing": "rgba(33, 150, 243, 1)",
-    "plotLineColorFalling": "rgba(33, 150, 243, 1)",
-    "gridLineColor": "rgba(240, 243, 250, 1)",
-    "scaleFontColor": "rgba(120, 123, 134, 1)",
-    "belowLineFillColorGrowing": "rgba(33, 150, 243, 0.12)",
-    "belowLineFillColorFalling": "rgba(33, 150, 243, 0.12)",
-    "symbolActiveColor": "rgba(33, 150, 243, 0.12)",
-    "tabs": [
+ 
+  <!-- <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+   new TradingView.widget(
       {
-        "title": "Indices",
-        "symbols": [
+        "colorTheme" : "light",
+        "dateRange": "12M",
+        "showChart": true,
+        "locale": "en",
+        "largeChartUrl": "",
+        "isTransparent": false,
+        "width": "400",
+        "height": "660",
+        "plotLineColorGrowing": "rgba(33, 150, 243, 1)",
+        "plotLineColorFalling": "rgba(33, 150, 243, 1)",
+        "gridLineColor": "rgba(240, 243, 250, 1)",
+        "scaleFontColor": "rgba(120, 123, 134, 1)",
+        "belowLineFillColorGrowing": "rgba(33, 150, 243, 0.12)",
+        "belowLineFillColorFalling": "rgba(33, 150, 243, 0.12)",
+        "symbolActiveColor": "rgba(33, 150, 243, 0.12)",
+        "tabs": [
           {
-            "s": "FOREXCOM:SPXUSD",
-            "d": "S&P 500"
+            "title": "Indices",
+            "symbols": [
+              {
+                "s": "FOREXCOM:SPXUSD",
+                "d": "S&P 500"
+              },
+              {
+                "s": "FOREXCOM:NSXUSD",
+                "d": "Nasdaq 100"
+              },
+              {
+                "s": "FOREXCOM:DJI",
+                "d": "Dow 30"
+              },
+              {
+                "s": "INDEX:NKY",
+                "d": "Nikkei 225"
+              },
+              {
+                "s": "INDEX:DEU30",
+                "d": "DAX Index"
+              },
+              {
+                "s": "FOREXCOM:UKXGBP",
+                "d": "FTSE 100"
+              }
+            ],
+            "originalTitle": "Indices"
           },
           {
-            "s": "FOREXCOM:NSXUSD",
-            "d": "Nasdaq 100"
+            "title": "Commodities",
+            "symbols": [
+              {
+                "s": "CME_MINI:ES1!",
+                "d": "S&P 500"
+              },
+              {
+                "s": "CME:6E1!",
+                "d": "Euro"
+              },
+              {
+                "s": "COMEX:GC1!",
+                "d": "Gold"
+              },
+              {
+                "s": "NYMEX:CL1!",
+                "d": "Crude Oil"
+              },
+              {
+                "s": "NYMEX:NG1!",
+                "d": "Natural Gas"
+              },
+              {
+                "s": "CBOT:ZC1!",
+                "d": "Corn"
+              }
+            ],
+            "originalTitle": "Commodities"
           },
           {
-            "s": "FOREXCOM:DJI",
-            "d": "Dow 30"
+            "title": "Bonds",
+            "symbols": [
+              {
+                "s": "CME:GE1!",
+                "d": "Eurodollar"
+              },
+              {
+                "s": "CBOT:ZB1!",
+                "d": "T-Bond"
+              },
+              {
+                "s": "CBOT:UB1!",
+                "d": "Ultra T-Bond"
+              },
+              {
+                "s": "EUREX:FGBL1!",
+                "d": "Euro Bund"
+              },
+              {
+                "s": "EUREX:FBTP1!",
+                "d": "Euro BTP"
+              },
+              {
+                "s": "EUREX:FGBM1!",
+                "d": "Euro BOBL"
+              }
+            ],
+            "originalTitle": "Bonds"
           },
           {
-            "s": "INDEX:NKY",
-            "d": "Nikkei 225"
-          },
-          {
-            "s": "INDEX:DEU30",
-            "d": "DAX Index"
-          },
-          {
-            "s": "FOREXCOM:UKXGBP",
-            "d": "FTSE 100"
+            "title": "Forex",
+            "symbols": [
+              {
+                "s": "FX:EURUSD"
+              },
+              {
+                "s": "FX:GBPUSD"
+              },
+              {
+                "s": "FX:USDJPY"
+              },
+              {
+                "s": "FX:USDCHF"
+              },
+              {
+                "s": "FX:AUDUSD"
+              },
+              {
+                "s": "FX:USDCAD"
+              }
+            ],
+            "originalTitle": "Forex"
           }
-        ],
-        "originalTitle": "Indices"
-      },
-      {
-        "title": "Commodities",
-        "symbols": [
-          {
-            "s": "CME_MINI:ES1!",
-            "d": "S&P 500"
-          },
-          {
-            "s": "CME:6E1!",
-            "d": "Euro"
-          },
-          {
-            "s": "COMEX:GC1!",
-            "d": "Gold"
-          },
-          {
-            "s": "NYMEX:CL1!",
-            "d": "Crude Oil"
-          },
-          {
-            "s": "NYMEX:NG1!",
-            "d": "Natural Gas"
-          },
-          {
-            "s": "CBOT:ZC1!",
-            "d": "Corn"
-          }
-        ],
-        "originalTitle": "Commodities"
-      },
-      {
-        "title": "Bonds",
-        "symbols": [
-          {
-            "s": "CME:GE1!",
-            "d": "Eurodollar"
-          },
-          {
-            "s": "CBOT:ZB1!",
-            "d": "T-Bond"
-          },
-          {
-            "s": "CBOT:UB1!",
-            "d": "Ultra T-Bond"
-          },
-          {
-            "s": "EUREX:FGBL1!",
-            "d": "Euro Bund"
-          },
-          {
-            "s": "EUREX:FBTP1!",
-            "d": "Euro BTP"
-          },
-          {
-            "s": "EUREX:FGBM1!",
-            "d": "Euro BOBL"
-          }
-        ],
-        "originalTitle": "Bonds"
-      },
-      {
-        "title": "Forex",
-        "symbols": [
-          {
-            "s": "FX:EURUSD"
-          },
-          {
-            "s": "FX:GBPUSD"
-          },
-          {
-            "s": "FX:USDJPY"
-          },
-          {
-            "s": "FX:USDCHF"
-          },
-          {
-            "s": "FX:AUDUSD"
-          },
-          {
-            "s": "FX:USDCAD"
-          }
-        ],
-        "originalTitle": "Forex"
+        ]
       }
-    ]
-  }
-    </script>
+    )
+  </script> -->
 
-<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-<script type="text/javascript">
-new TradingView.widget(
-{
-"width": 980,
-"height": 610,
-"symbol": "NASDAQ:AAPL",
-"interval": "D",
-"timezone": "Etc/UTC",
-"theme": "light",
-"style": "1",
-"locale": "uk",
-"toolbar_bg": "#f1f3f6",
-"enable_publishing": false,
-"allow_symbol_change": true,
-"container_id": "tradingview_ddbbe"
-}
-);
-</script>
+<!-- <script type="text/javascript">
+ new TradingView.widget(
+      {
+      "width": 980,
+      "height": 610,
+      "symbol": "NASDAQ:AAPL",
+      "interval": "D",
+      "timezone": "Etc/UTC",
+      "theme": "light",
+      "style": "1",
+      "locale": "uk",
+      "toolbar_bg": "#f1f3f6",
+      "enable_publishing": false,
+      "allow_symbol_change": true,
+      "container_id": "tradingview_ddbbe"
+      }
+      );
+</script> -->
       </body>
 </html>
