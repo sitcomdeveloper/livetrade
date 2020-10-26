@@ -9,7 +9,7 @@
     <div class="top-panel">
         <div class="user-balance">
             <div>
-                Balance : 
+                Balance :
                 <strong>
                     <span>{{this.bindLoginData?.CurrencyName}} </span> {{this.bindLoginData?.Balance}}
                 </strong>
@@ -46,36 +46,36 @@
                     </dl>
                     <dl class="mb20">
                       <dt>Registration date: </dt>
-                      <dd>{{this.bindLoginData?.CreatedAt}}</dd>  
+                      <dd>{{this.bindLoginData?.CreatedAt}}</dd>
                     </dl>
                     <h2>Trading information</h2>
                     <dl>
                       <dt>Currency: </dt>
-                      <dd>{{this.bindLoginData?.CurrencyName}}</dd>  
+                      <dd>{{this.bindLoginData?.CurrencyName}}</dd>
                     </dl>
                     <dl>
                       <dt>Leverage: </dt>
-                      <dd>{{this.bindLoginData?.LeverageName}}</dd>  
+                      <dd>{{this.bindLoginData?.LeverageName}}</dd>
                     </dl>
                     <dl class="mb20">
                       <dt>Stop out:</dt>
-                      <dd>{{this.bindLoginData?.StopOut}}</dd>  
+                      <dd>{{this.bindLoginData?.StopOut}}</dd>
                     </dl>
                     <dl>
                       <dt>Profit: </dt>
-                      <dd><span class="color01">{{this.bindLoginData?.OpenProfit}}</span></dd>  
+                      <dd><span class="color01">{{this.bindLoginData?.OpenProfit}}</span></dd>
                     </dl>
                 </div>
             </div>
-        
+
           </div>
           <div class="btn-group item language-nav">
             <!-- <ng-select bindlabel="language" bindvalue="id" class="ng-select bottom ng-single ng-untouched ng-pristine ng-valid ng-selected" name="userSelectedLanguage" placeholder="All sides" role="dropdown">
                 <div class="ng-control">
     <div class="ng-value-container">
         <div class="ng-placeholder">All sides</div>
-        <div class="ng-value"> 
-                    EN       
+        <div class="ng-value">
+                    EN
         </div>
     </div>
     <span class="ng-arrow-zone">
@@ -89,7 +89,7 @@
             <div class="dropdown-menu" role="menu">
                 <ul>
                     <li role="menuitem"><a class="link-settings" href="javascript:void(0);">Settings</a></li>
-                    
+
                     <li role="menuitem">
                         <a class="link-logout" (click)="logout()" href="javascript:void(0);">Log out</a>
                     </li>
@@ -106,7 +106,7 @@
 <div class="tradingview-widget-container col-md-4">
     <div class="tradingview-widget-container__widget"></div>
     <div class="tradingview-widget-copyright">
-        </div>      
+        </div>
   </div>
 </div>
   <!-- TradingView Widget END -->
@@ -116,9 +116,33 @@
 <div class="tradingview-widget-container">
     <div id="tradingview_ddbbe"></div>
     <div class="tradingview-widget-copyright"><a href="https://uk.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL Chart</span></a> by TradingView</div>
-   
+
   </div>
 </div> -->
 </div>
 </div>
   <!-- TradingView Widget END -->
+
+  <footer>
+    <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright">
+    <a href="https://www.tradingview.com/markets/currencies/economic-calendar/" rel="noopener" target="_blank">
+      <!-- <span class="blue-text">Economic Calendar</span> -->
+    </a>
+  </div>
+  <!-- <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+    {
+    "colorTheme"; "dark",
+    "isTransparent"; false,
+    "width"; "510",
+    "height"; "600",
+    "locale"; "en",
+    "importanceFilter"; "-1,0,1",
+    "currencyFilter"; "GBP"
+  }
+    </script> -->
+</div>
+<!-- TradingView Widget END -->
+  </footer>

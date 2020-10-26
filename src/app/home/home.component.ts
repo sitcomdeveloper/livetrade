@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit,AfterViewInit  {
     this.bindLoginData = this.getLoginDetails;
   }
   ngAfterViewInit() {
-   
+// chart
     const s = this.renderer2.createElement('script');
     s.type = 'text/javascript';
     s.src = 'https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js';
@@ -52,12 +52,17 @@ export class HomeComponent implements OnInit,AfterViewInit  {
     //   "container_id": "tradingview_ddbbe"
     //   }
     //   );
-    
+    // economeic calendar
+    const t = this.renderer2.createElement('script');
+    t.type = 'text/javascript';
+    t.src = 'https://s3.tradingview.com/external-embedding/embed-widget-events.js';
+    t.text = ``;
+    this.renderer2.appendChild(this._document.body, t);
   }
   // logout
   logout() {
     localStorage.clear();
-    this.router.navigateByUrl('/login'); 
+    this.router.navigateByUrl('/login');
     window.location.href = "/login";
   }
   // deposit
